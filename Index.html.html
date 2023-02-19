@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Coatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+             padding:0px;
+             margin:0px;
+        }
+        body {
+              background-image:url(C:/Users/91630/Downloads/tues.jpeg);
+              background-size:100%;
+              background-position:0px -450px;
+              width:100vw;
+              height:100vh;
+              display:flex;
+              justify-content:center;
+              align-items: center;
+        }
+        #container {
+               position:relative;
+               width:40%;
+               height:80%;
+               background-color:rgba(0, 0, 0, 0.393);
+               border-radius:2%;
+               box-shadow:5px 5px 5px black;
+        }
+        #display {
+                    width:75%;
+                    height:30px;
+                    position:absolute;
+                    top:5%;
+                    left:9%;
+                    background-color:black;
+                    color:white;
+                    font-size:25px;
+                    padding:5px;
+                    outline:none;
+                    border:groove 10px rgba(0, 0, 0, 0.236);
+                    box-shadow:2px 2px 5px black;
+        }
+        .a {
+             top:15vh;
+             left:5vw;
+             margin:5px;
+             margin-top:20px;
+             position:relative;
+             width:15%;
+             height:6vh;
+             background-color:black;
+             color:white;
+             font-size: 24px;
+             border-radius:5px;
+             box-shadow:2px 2px 2px black;
+             border:2px solid white;
+        }
+        #clear {
+                position:absolute;
+                bottom:30px;
+                width:30%;
+                height:6vh;
+                font-size: 24px;
+                left:5vw;
+                background-color:rgba(110, 7, 206, 0.322);
+                color:white;
+                border:2px solid white;
+                border-radius:5px;
+                box-shadow:2px 2px 2px black;
+        }
+        #equ {
+            position:absolute;
+                bottom:30px;
+                width:40%;
+                height:6vh;
+                font-size: 24px;
+                left:18vw;
+                background-color:rgba(110, 7, 206, 0.322);
+                color:white;
+                border:2px solid white;
+                border-radius:5px;
+                box-shadow:2px 2px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <form name="cform">
+        <input name="ans" id="display">
+        <br>
+        <input type="button"  class="a" value="1" onclick="cform.ans.value+='1'" onmousedown="clicksound()">
+        <input type="button"  class="a" value="2" onclick="cform.ans.value+='2'" onmousedown="clicksound()">
+        <input type="button"  class="a" value="3" onclick="cform.ans.value+='3'" onmousedown="clicksound()">
+        <input type="button"  class="a" value="+" onclick="cform.ans.value+='+'" onmousedown="clicksound()">
+        <br>
+        <input type="button"   class="a" value="4" onclick="cform.ans.value+='4'" onmousedown="clicksound()">
+        <input type="button"  class="a"  value="5" onclick="cform.ans.value+='5'" onmousedown="clicksound()">
+        <input type="button"  class="a"  value="6" onclick="cform.ans.value+='6'" onmousedown="clicksound()">
+        <input type="button"  class="a"  value="-" onclick="cform.ans.value+='-'" onmousedown="clicksound()">
+        <br>
+        <input type="button"  class="a"  value="7" onclick="cform.ans.value+='7'" onmousedown="clicksound()">
+        <input type="button"   class="a" value="8" onclick="cform.ans.value+='8'" onmousedown="clicksound()">
+        <input type="button"   class="a" value="9" onclick="cform.ans.value+='9'" onmousedown="clicksound()">
+        <input type="button"   class="a" value="x" onclick="cform.ans.value+='*'" onmousedown="clicksound()">
+        <br>
+        <input type="button"  class="a"  value="%" onclick="cform.ans.value+='%'" onmousedown="clicksound()">
+        <input type="button"  class="a"  value="0" onclick="cform.ans.value+='0'" onmousedown="clicksound()">
+        <input type="button"  class="a" value="." onclick="cform.ans.value+='.'" onmousedown="clicksound()">
+        <input type="button"   class="a" value="/" onclick="cform.ans.value+='/'" onmousedown="clicksound()">
+        <br>
+        <input type="button"  id="equ" value="=" onclick="cform.ans.value=eval(cform.ans.value)" onmousedown="clicksound()">
+        <input type="button"  id="clear" value="c" onclick="cform.ans.value=''" onmousedown="clicksound()">
+    </form>
+    </div>
+    <script>
+        function clicksound()
+        {
+            var cliksound=new Audio()
+            cliksound.src="C:/Users/91630/Downloads/achive-sound-132273.mp3"
+            cliksound.play()
+        }
+    </script>
+</body>
+</html>
